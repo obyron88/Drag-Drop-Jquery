@@ -4,10 +4,46 @@
         <meta charset="utf-8">
         <title>index</title>
         <link rel="stylesheet" href="style.css">
+        <script src="jquery.js"></script>
+          <script src="jquery-ui.min.js"></script>
     </head>
-
     <body>
+<button id="replay">Rejouer !!!</button>
+<div class="popo">
+<p class="bon" id="mvert"><b>m</b></p>
+<p class="bon" id="mmarron"><b>m</b></p>
+<p class="bon" id="mrouge"><b>m</b></p>
+<p class="bon" id="mjaune"><b>m</b></p>
+<p class="bon" id="mbleu"><b>m</b></p>
+<p class="bon" id="morange"><b>m</b></p>
+</div>
+  <img id="paquet" src="/var/www/html/PHP/Drag-Drop-Jquery/paquet.png">
+<script>
 
+$(document).ready(function(){
+  $(".popo p").draggable();
+  // length compte le nbr de classe .bon
+  var number = $(".bon").length;
+  var dropmms = 0;
+  var dropu = --number + 1;
+  $("#paquet").droppable({
 
-    </body>
+    drop: function(){
+    dropmms++;
+    dropu --;
+      if (dropmms == number + 1) {
+        alert(" Bien joué, tous les m&ms sont dans le paquet ! ");
+      } else {
+        alert("Encore "+ dropu +"!");
+      }
+    }
+    });
+});
+
+$("#replay").click(function(){
+  location.reload();
+});
+</script>
+
+</body>
 </html>

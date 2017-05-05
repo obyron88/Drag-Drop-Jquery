@@ -1,3 +1,39 @@
-/*******************************
-			  CSS
-*******************************/
+body {
+  background-color: #BA8364;
+}
+.popo {
+position: relative;
+}
+.bon {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  background-color: red;
+}
+#mvert{
+ background-color: green;
+}
+#mmarron{
+ background-color: brown;
+}
+#mrouge{
+ background-color: red;
+}
+#mjaune{
+ background-color: yellow;
+}
+#mbleu{
+ background-color: blue;
+}
+#morange{
+ background-color: orange;
+}
+
+#paquet {
+  position: fixed;
+  margin-left: 600px;
+  margin-top: -500px;
+}
